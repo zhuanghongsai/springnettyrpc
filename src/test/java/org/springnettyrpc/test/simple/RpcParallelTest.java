@@ -13,7 +13,7 @@ public class RpcParallelTest {
     public static void main(String[] args) throws Exception {
         final MessageSendExecutor executor = new MessageSendExecutor("127.0.0.1:18888");
         //并行度10000
-        int parallel = 1;
+        int parallel = 10000;
 
         //开始计时
         StopWatch sw = new StopWatch();
