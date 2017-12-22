@@ -10,6 +10,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * rpc服务器配置加载
  * @author ZHS
  * @create 2017-12-11 16:39
  */

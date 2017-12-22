@@ -12,6 +12,7 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 import java.util.Map;
 
 /**
+ * Rpc服务端管道初始化
  * @author ZHS
  * @create 2017-12-11 16:45
  */

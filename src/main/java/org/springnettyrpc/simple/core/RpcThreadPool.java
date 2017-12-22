@@ -3,6 +3,7 @@ package org.springnettyrpc.simple.core;
 import java.util.concurrent.*;
 
 /**
+ * rpc线程池封装
  * @author ZHS
  * @create 2017-12-11 10:33
  */

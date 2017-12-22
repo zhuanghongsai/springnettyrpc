@@ -10,6 +10,7 @@ import org.springnettyrpc.simple.model.MessageResponse;
 import java.util.Map;
 
 /**
+ * Rpc服务器消息线程任务处理
  * @author ZHS
  * @create 2017-12-11 16:46
  */

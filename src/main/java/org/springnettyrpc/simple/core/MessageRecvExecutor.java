@@ -22,6 +22,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.logging.Level;
 
 /**
+ * Rpc服务器执行模块
  * @author ZHS
  * @create 2017-12-11 16:44
  */
@@ -48,6 +49,11 @@ public class MessageRecvExecutor  implements ApplicationContextAware, Initializi
         threadPoolExecutor.submit(task);
     }
 
+    /**
+     * 加载完spring 上下文环境,会自动调用该方法
+     * @param ctx
+     * @throws BeansException
+     */
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
         try {
             MessageKeyVal keyVal = (MessageKeyVal) ctx.getBean(Class.forName("org.springnettyrpc.simple.model.MessageKeyVal"));
@@ -66,6 +72,10 @@ public class MessageRecvExecutor  implements ApplicationContextAware, Initializi
         }
     }
 
+    /**
+     * 表示在资源加载完以后，初始化bean之前执行的方法
+     * @throws Exception
+     */
     public void afterPropertiesSet() throws Exception {
         //netty的线程池模型设置成主从线程池模式，这样可以应对高并发请求
         //当然netty还支持单线程、多线程网络IO模型，可以根据业务需求灵活配置

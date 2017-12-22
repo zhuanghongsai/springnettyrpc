@@ -32,7 +32,9 @@ public class NamedThreadFactory implements ThreadFactory {
     public NamedThreadFactory(String prefix, boolean daemo) {
         this.prefix = prefix + "-thread-";
         daemoThread = daemo;
+        // SecurityManager安全管理器
         SecurityManager s = System.getSecurityManager();
+        //返回该线程所属的线程组
         threadGroup = (s == null) ? Thread.currentThread().getThreadGroup() : s.getThreadGroup();
     }
 

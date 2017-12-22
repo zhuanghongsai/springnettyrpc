@@ -8,6 +8,7 @@ import org.springnettyrpc.simple.model.MessageResponse;
 import java.util.Map;
 
 /**
+ * Rpc服务器消息处理
  * @author ZHS
  * @create 2017-12-11 16:45
  */
